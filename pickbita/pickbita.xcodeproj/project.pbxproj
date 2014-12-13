@@ -14,6 +14,9 @@
 		5109D0C41A3CAB06005B1348 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5109D0C31A3CAB06005B1348 /* Images.xcassets */; };
 		5109D0C71A3CAB06005B1348 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5109D0C51A3CAB06005B1348 /* LaunchScreen.xib */; };
 		5109D0D31A3CAB06005B1348 /* pickbitaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5109D0D21A3CAB06005B1348 /* pickbitaTests.m */; };
+		5109D0DD1A3CC101005B1348 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5109D0DC1A3CC101005B1348 /* 1.jpg */; };
+		5109D0DF1A3CC3B5005B1348 /* head1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5109D0DE1A3CC3B5005B1348 /* head1.jpg */; };
+		5109D0E11A3CC3D7005B1348 /* head4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5109D0E01A3CC3D7005B1348 /* head4.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		5109D0CC1A3CAB06005B1348 /* pickbitaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pickbitaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5109D0D11A3CAB06005B1348 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5109D0D21A3CAB06005B1348 /* pickbitaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pickbitaTests.m; sourceTree = "<group>"; };
+		5109D0DC1A3CC101005B1348 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../../../1.jpg; sourceTree = "<group>"; };
+		5109D0DE1A3CC3B5005B1348 /* head1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = head1.jpg; path = ../../../../Downloads/head1.jpg; sourceTree = "<group>"; };
+		5109D0E01A3CC3D7005B1348 /* head4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = head4.jpg; path = ../../../../Downloads/head3_files/head4.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 		5109D0AA1A3CAB06005B1348 = {
 			isa = PBXGroup;
 			children = (
+				5109D0E01A3CC3D7005B1348 /* head4.jpg */,
+				5109D0DE1A3CC3B5005B1348 /* head1.jpg */,
+				5109D0DC1A3CC101005B1348 /* 1.jpg */,
 				5109D0B51A3CAB06005B1348 /* pickbita */,
 				5109D0CF1A3CAB06005B1348 /* pickbitaTests */,
 				5109D0B41A3CAB06005B1348 /* Products */,
@@ -200,6 +209,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5109D0C21A3CAB06005B1348 /* Main.storyboard in Resources */,
+				5109D0DF1A3CC3B5005B1348 /* head1.jpg in Resources */,
+				5109D0E11A3CC3D7005B1348 /* head4.jpg in Resources */,
+				5109D0DD1A3CC101005B1348 /* 1.jpg in Resources */,
 				5109D0C71A3CAB06005B1348 /* LaunchScreen.xib in Resources */,
 				5109D0C41A3CAB06005B1348 /* Images.xcassets in Resources */,
 			);
@@ -346,6 +358,7 @@
 				INFOPLIST_FILE = pickbita/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -356,6 +369,7 @@
 				INFOPLIST_FILE = pickbita/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
