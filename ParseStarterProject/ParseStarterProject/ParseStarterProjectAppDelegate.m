@@ -34,14 +34,15 @@
 
     [PFUser enableAutomaticUser];
     
+    /************************* User sign up ****************************
     PFUser *user = [PFUser user];
-    user.username = @"Alice";
+    user.username = @"Canon";
     user.password = @"password";
-    user.email = @"alice@gmail.com";
+    user.email = @"Canon@gmail.com";
     
     // other fields can be set if you want to save more information
     //user[@"phone"] = @"650-555-0000";
-    /*
+     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             // Hooray! Let them use the app now.
@@ -50,7 +51,24 @@
             // Show the errorString somewhere and let the user try again.
             self.DebugInfor.text = errorString;
         }
-    }];*/
+    }];
+    ************************** User Sign Up ****************************/
+    
+    /************************* user sign in ****************************/
+    
+    [PFUser logInWithUsernameInBackground:@"Alice" password:@"password"
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            // initial pics
+                                        } else {
+                                            // The login failed. Check error to see why.
+                                        }
+                                    }];
+     
+    /************************** User Sign In ****************************/
+    
+    
+    
     PFACL *defaultACL = [PFACL ACL];
 
     // If you would like all objects to be private by default, remove this line.
@@ -58,12 +76,14 @@
 
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
+    /******************************** up load pics *************************************
     // should upload some photos before start. Maybe in this part.
-    // if you already upload these pics, just comments all of below.
-    UIImage *image = [UIImage imageNamed:@"image_2.jpg"];
+    // Images bounded with users
+     
+    UIImage *image = [UIImage imageNamed:@"image_e.jpg"];
     
     NSData *imageData = UIImageJPEGRepresentation(image, 0.05f);
-    PFFile *imageFile = [PFFile fileWithName:@"image_2.jpg" data:imageData];
+    PFFile *imageFile = [PFFile fileWithName:@"image_e.jpg" data:imageData];
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             
@@ -95,7 +115,8 @@
             self.DebugInfor.text = @"Upload Photo Failed";
         }
     }];
-
+    *********************************** Up Load Pics *************************************/
+    
     // Override point for customization after application launch.
 
     self.window.rootViewController = self.viewController;
