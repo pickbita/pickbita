@@ -11,6 +11,9 @@
 @interface ViewController : UIViewController
 
 - (IBAction)showHome:(id)sender;
+- (IBAction)showActivity:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UINavigationItem *PicBitsTitle;
 
 @end
 

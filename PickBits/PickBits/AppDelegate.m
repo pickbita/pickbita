@@ -19,7 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     id controller = [[ViewController alloc] initWithNibName:@"View" bundle:nil];
+    
     self.window.rootViewController = controller;
+    
     return YES;
 }
 

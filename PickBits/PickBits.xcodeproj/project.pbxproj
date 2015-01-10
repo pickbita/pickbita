@@ -20,6 +20,8 @@
 		51A1C1E91A54DB8200B0D3A7 /* home.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A1C1E61A54DB8200B0D3A7 /* home.m */; };
 		51A1C1EA1A54DB8200B0D3A7 /* home.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A1C1E71A54DB8200B0D3A7 /* home.xib */; };
 		51A1C1EB1A54DB8200B0D3A7 /* home.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A1C1E71A54DB8200B0D3A7 /* home.xib */; };
+		51D2A15D1A561E2700693823 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D2A15C1A561E2700693823 /* ActivityViewController.m */; };
+		51D2A15E1A561E2700693823 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D2A15C1A561E2700693823 /* ActivityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		51A1C1E51A54DB8200B0D3A7 /* home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = home.h; path = ../home.h; sourceTree = "<group>"; };
 		51A1C1E61A54DB8200B0D3A7 /* home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = home.m; path = ../home.m; sourceTree = "<group>"; };
 		51A1C1E71A54DB8200B0D3A7 /* home.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = home.xib; path = ../home.xib; sourceTree = "<group>"; };
+		51D2A15B1A561E2700693823 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		51D2A15C1A561E2700693823 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,14 +95,9 @@
 		51A1C1B81A54BAD600B0D3A7 /* PickBits */ = {
 			isa = PBXGroup;
 			children = (
-				51A1C1E51A54DB8200B0D3A7 /* home.h */,
-				51A1C1E61A54DB8200B0D3A7 /* home.m */,
-				51A1C1E71A54DB8200B0D3A7 /* home.xib */,
+				51D2A1561A56061000693823 /* controller */,
 				51A1C1BD1A54BAD600B0D3A7 /* AppDelegate.h */,
 				51A1C1BE1A54BAD600B0D3A7 /* AppDelegate.m */,
-				51A1C1C01A54BAD600B0D3A7 /* ViewController.h */,
-				51A1C1C11A54BAD600B0D3A7 /* ViewController.m */,
-				51A1C1DF1A54BD2800B0D3A7 /* View.xib */,
 				51A1C1C31A54BAD600B0D3A7 /* Main.storyboard */,
 				51A1C1C61A54BAD600B0D3A7 /* Images.xcassets */,
 				51A1C1C81A54BAD600B0D3A7 /* LaunchScreen.xib */,
@@ -131,6 +130,21 @@
 				51A1C1D41A54BAD600B0D3A7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		51D2A1561A56061000693823 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				51A1C1E51A54DB8200B0D3A7 /* home.h */,
+				51A1C1E61A54DB8200B0D3A7 /* home.m */,
+				51A1C1E71A54DB8200B0D3A7 /* home.xib */,
+				51A1C1C01A54BAD600B0D3A7 /* ViewController.h */,
+				51A1C1C11A54BAD600B0D3A7 /* ViewController.m */,
+				51A1C1DF1A54BD2800B0D3A7 /* View.xib */,
+				51D2A15B1A561E2700693823 /* ActivityViewController.h */,
+				51D2A15C1A561E2700693823 /* ActivityViewController.m */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +255,7 @@
 				51A1C1BF1A54BAD600B0D3A7 /* AppDelegate.m in Sources */,
 				51A1C1E81A54DB8200B0D3A7 /* home.m in Sources */,
 				51A1C1BC1A54BAD600B0D3A7 /* main.m in Sources */,
+				51D2A15D1A561E2700693823 /* ActivityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51A1C1E91A54DB8200B0D3A7 /* home.m in Sources */,
+				51D2A15E1A561E2700693823 /* ActivityViewController.m in Sources */,
 				51A1C1D61A54BAD600B0D3A7 /* PickBitsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

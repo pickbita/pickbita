@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="PicBitsTitle" destination="t7k-WQ-IBM" id="EDI-Ll-4GA"/>
                 <outlet property="view" destination="iN0-l3-epB" id="yJM-PO-hCa"/>
             </connections>
         </placeholder>
@@ -20,7 +21,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="25" y="562" width="41" height="30"/>
+                        <rect key="frame" x="30" y="629" width="41" height="30"/>
                     </variation>
                     <connections>
                         <action selector="showHome:" destination="-1" eventType="touchUpInside" id="lxL-Pg-KAR"/>
@@ -32,7 +33,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="341" y="562" width="30" height="30"/>
+                        <rect key="frame" x="314" y="629" width="30" height="30"/>
                     </variation>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-Xe-iZ4">
@@ -41,23 +42,41 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="177" y="562" width="41" height="30"/>
+                        <rect key="frame" x="167" y="629" width="41" height="30"/>
                     </variation>
                 </button>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDt-z2-SEA">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="t7k-WQ-IBM">
+                            <barButtonItem key="rightBarButtonItem" title="Activity" id="gVK-Gq-nv4">
+                                <connections>
+                                    <action selector="showActivity:" destination="-1" id="nAR-qd-8V1"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="21" width="375" height="44"/>
+                    </variation>
+                </navigationBar>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="jqE-Xj-l8K"/>
                     <exclude reference="ndW-Xe-iZ4"/>
+                    <exclude reference="ZDt-z2-SEA"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="jqE-Xj-l8K"/>
                     <include reference="ndW-Xe-iZ4"/>
+                    <include reference="ZDt-z2-SEA"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="352.5" y="367.5"/>
         </view>
     </objects>
 </document>

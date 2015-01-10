@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "home.h"
+#import "ActivityViewController.h"
+
+
 
 @interface ViewController ()
 
@@ -18,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,5 +32,10 @@
 - (IBAction)showHome:(id)sender {
     id controller = [[home alloc] initWithNibName:@"home" bundle:nil];
     [self presentViewController:controller animated:YES completion:NULL];
+}
+
+- (IBAction)showActivity:(id)sender {
+    id activityController = [[ActivityViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:activityController animated:YES];
 }
 @end
