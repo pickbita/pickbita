@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <Parse/Parse.h>
 #import "StreamScreen.h"
 
 @implementation AppDelegate
@@ -16,6 +16,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [Parse setApplicationId:@"rVGGG4r0FIkpR3hbOdWG67nmrlPBqKTMB3kQulbb"
+                  clientKey:@"zMuqmo6MifipxMkjz7OG95Xv2sfgN5l7IoJstEMI"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
 

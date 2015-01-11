@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "API.h"
 
 @interface LoginScreen : UIViewController
 {
