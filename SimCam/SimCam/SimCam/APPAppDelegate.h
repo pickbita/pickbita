@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  APPAppDelegate.h
 //  SimCam
 //
 //  Created by Peerincle on 12/01/2015.
@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class APPViewController;
+
+@interface APPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@end
+@property (strong, nonatomic) APPViewController *viewController;
 
+@end

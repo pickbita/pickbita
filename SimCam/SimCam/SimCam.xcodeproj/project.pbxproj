@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51677CB91A6477F700ABC2CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677CB81A6477F700ABC2CC /* main.m */; };
-		51677CBC1A6477F700ABC2CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677CBB1A6477F700ABC2CC /* AppDelegate.m */; };
-		51677CBF1A6477F700ABC2CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677CBE1A6477F700ABC2CC /* ViewController.m */; };
-		51677CC21A6477F700ABC2CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51677CC01A6477F700ABC2CC /* Main.storyboard */; };
-		51677CC41A6477F700ABC2CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51677CC31A6477F700ABC2CC /* Images.xcassets */; };
-		51677CC71A6477F700ABC2CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51677CC51A6477F700ABC2CC /* LaunchScreen.xib */; };
 		51677CD31A6477F700ABC2CC /* SimCamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677CD21A6477F700ABC2CC /* SimCamTests.m */; };
+		51918B731A65D64600468404 /* APPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51918B671A65D64600468404 /* APPAppDelegate.m */; };
+		51918B741A65D64600468404 /* APPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51918B691A65D64600468404 /* APPViewController.m */; };
+		51918B751A65D64600468404 /* APPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51918B6B1A65D64600468404 /* APPViewController.xib */; };
+		51918B761A65D64600468404 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51918B6D1A65D64600468404 /* InfoPlist.strings */; };
+		51918B771A65D64600468404 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51918B6F1A65D64600468404 /* Images.xcassets */; };
+		51918B781A65D64600468404 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51918B701A65D64600468404 /* Info.plist */; };
+		51918B791A65D64600468404 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51918B711A65D64600468404 /* main.m */; };
+		51918B7A1A65D64600468404 /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 51918B721A65D64600468404 /* readme */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,18 +30,19 @@
 
 /* Begin PBXFileReference section */
 		51677CB31A6477F700ABC2CC /* SimCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		51677CB71A6477F700ABC2CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51677CB81A6477F700ABC2CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		51677CBA1A6477F700ABC2CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		51677CBB1A6477F700ABC2CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		51677CBD1A6477F700ABC2CC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		51677CBE1A6477F700ABC2CC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		51677CC11A6477F700ABC2CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		51677CC31A6477F700ABC2CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		51677CC61A6477F700ABC2CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		51677CCC1A6477F700ABC2CC /* SimCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51677CD11A6477F700ABC2CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51677CD21A6477F700ABC2CC /* SimCamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimCamTests.m; sourceTree = "<group>"; };
+		51918B661A65D64600468404 /* APPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPAppDelegate.h; sourceTree = "<group>"; };
+		51918B671A65D64600468404 /* APPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPAppDelegate.m; sourceTree = "<group>"; };
+		51918B681A65D64600468404 /* APPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPViewController.h; sourceTree = "<group>"; };
+		51918B691A65D64600468404 /* APPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPViewController.m; sourceTree = "<group>"; };
+		51918B6C1A65D64600468404 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = APPViewController.xib; sourceTree = "<group>"; };
+		51918B6E1A65D64600468404 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		51918B6F1A65D64600468404 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		51918B701A65D64600468404 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51918B711A65D64600468404 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		51918B721A65D64600468404 /* readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,25 +84,18 @@
 		51677CB51A6477F700ABC2CC /* SimCam */ = {
 			isa = PBXGroup;
 			children = (
-				51677CBA1A6477F700ABC2CC /* AppDelegate.h */,
-				51677CBB1A6477F700ABC2CC /* AppDelegate.m */,
-				51677CBD1A6477F700ABC2CC /* ViewController.h */,
-				51677CBE1A6477F700ABC2CC /* ViewController.m */,
-				51677CC01A6477F700ABC2CC /* Main.storyboard */,
-				51677CC31A6477F700ABC2CC /* Images.xcassets */,
-				51677CC51A6477F700ABC2CC /* LaunchScreen.xib */,
-				51677CB61A6477F700ABC2CC /* Supporting Files */,
+				51918B661A65D64600468404 /* APPAppDelegate.h */,
+				51918B671A65D64600468404 /* APPAppDelegate.m */,
+				51918B681A65D64600468404 /* APPViewController.h */,
+				51918B691A65D64600468404 /* APPViewController.m */,
+				51918B6B1A65D64600468404 /* APPViewController.xib */,
+				51918B6A1A65D64600468404 /* en.lproj */,
+				51918B6F1A65D64600468404 /* Images.xcassets */,
+				51918B701A65D64600468404 /* Info.plist */,
+				51918B711A65D64600468404 /* main.m */,
+				51918B721A65D64600468404 /* readme */,
 			);
 			path = SimCam;
-			sourceTree = "<group>";
-		};
-		51677CB61A6477F700ABC2CC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				51677CB71A6477F700ABC2CC /* Info.plist */,
-				51677CB81A6477F700ABC2CC /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		51677CCF1A6477F700ABC2CC /* SimCamTests */ = {
@@ -117,6 +113,14 @@
 				51677CD11A6477F700ABC2CC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		51918B6A1A65D64600468404 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				51918B6D1A65D64600468404 /* InfoPlist.strings */,
+			);
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +203,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51677CC21A6477F700ABC2CC /* Main.storyboard in Resources */,
-				51677CC71A6477F700ABC2CC /* LaunchScreen.xib in Resources */,
-				51677CC41A6477F700ABC2CC /* Images.xcassets in Resources */,
+				51918B7A1A65D64600468404 /* readme in Resources */,
+				51918B781A65D64600468404 /* Info.plist in Resources */,
+				51918B771A65D64600468404 /* Images.xcassets in Resources */,
+				51918B751A65D64600468404 /* APPViewController.xib in Resources */,
+				51918B761A65D64600468404 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51677CBF1A6477F700ABC2CC /* ViewController.m in Sources */,
-				51677CBC1A6477F700ABC2CC /* AppDelegate.m in Sources */,
-				51677CB91A6477F700ABC2CC /* main.m in Sources */,
+				51918B741A65D64600468404 /* APPViewController.m in Sources */,
+				51918B791A65D64600468404 /* main.m in Sources */,
+				51918B731A65D64600468404 /* APPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,20 +250,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		51677CC01A6477F700ABC2CC /* Main.storyboard */ = {
+		51918B6B1A65D64600468404 /* APPViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				51677CC11A6477F700ABC2CC /* Base */,
+				51918B6C1A65D64600468404 /* en */,
 			);
-			name = Main.storyboard;
+			name = APPViewController.xib;
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
-		51677CC51A6477F700ABC2CC /* LaunchScreen.xib */ = {
+		51918B6D1A65D64600468404 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				51677CC61A6477F700ABC2CC /* Base */,
+				51918B6E1A65D64600468404 /* en */,
 			);
-			name = LaunchScreen.xib;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -346,6 +353,7 @@
 				INFOPLIST_FILE = SimCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -356,6 +364,7 @@
 				INFOPLIST_FILE = SimCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -412,6 +421,7 @@
 				51677CD81A6477F700ABC2CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51677CD91A6477F700ABC2CC /* Build configuration list for PBXNativeTarget "SimCamTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +430,7 @@
 				51677CDB1A6477F700ABC2CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

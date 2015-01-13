@@ -1,0 +1,23 @@
+
+***************************************  some thing it can do *****************************************
+
+Target:
+
+    A simple camera that can take photos and select photo from album. It can save image to album "SimCam" without any information except photo itself.
+
+Three buttons:
+
+    1:select:     select photo from album
+    2:take photo: as it is.
+    3:save:       as it is. delete every fucking extra-info and save to "SimCam", name it from 1 to n.
+
+Added-on event:
+
+    1:touch photo for more than 0.7 sec, start cut process, show upper bar include "done" "cancel" button.       Show operated photo on UIImageView, show cancel button? which can back to original photo?
+
+    2:if there is unsaved photo on UImageView while select/take photo button clicked, give an alter with two button: save  ignorl
+
+    3:double click photo : full screen, zoom in to fit pixel. Then can zoom in and zoom out. When zoom out to the original, back to the classic view.
+
+    4:double click photo when zoom in: zoom out to original, back to classic view
+
