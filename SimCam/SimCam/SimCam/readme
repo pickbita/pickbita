@@ -4,12 +4,13 @@
 Target:
 
     A simple camera that can take photos and select photo from album. It can save image to album "SimCam" without any information except photo itself.
+    Could the background information be fucking non-writable after saving?
 
 Three buttons:
 
-    1:select:     select photo from album
-    2:take photo: as it is.
-    3:save:       as it is. delete every fucking extra-info and save to "SimCam", name it from 1 to n.
+  *  1:select:     select photo from album
+  *  2:take photo: as it is.
+  *  3:save:       as it is. delete every fucking extra-info and save to "SimCam", name it from 1 to n.
 
 Added-on event:
 

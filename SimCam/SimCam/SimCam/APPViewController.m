@@ -8,6 +8,7 @@
 
 #import "APPViewController.h"
 
+
 @interface APPViewController ()
 
 @end
@@ -18,7 +19,7 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    self.isSaved = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -28,6 +29,17 @@
 }
 
 - (IBAction)takePhoto:(UIButton *)sender {
+    
+    if(self.isSaved == NO)
+    {
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Save Photo?"
+                                                                 delegate:self
+                                                        cancelButtonTitle:@"Ignore"
+                                                   destructiveButtonTitle:@"Save"
+                                                        otherButtonTitles:nil];
+        [actionSheet showInView:self.view];
+        return;
+    }
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -45,6 +57,17 @@
 
 - (IBAction)selectPhoto:(UIButton *)sender {
     
+    if(self.isSaved == NO)
+    {
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Save Photo?"
+                                                                 delegate:self
+                                                        cancelButtonTitle:@"Ignore"
+                                                   destructiveButtonTitle:@"Save"
+                                                        otherButtonTitles:nil];
+        [actionSheet showInView:self.view];
+        return;
+    }
+    
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = NO;
@@ -56,6 +79,40 @@
 }
 
 - (IBAction)savePhoto:(UIButton *)sender {
+    UIImage *saveimage = self.saveimage;//[self.appimg getImage];
+    
+    saveImageToAlbum *saveAction = [[saveImageToAlbum alloc] init];
+    [saveAction saveImageWithAlbum:saveimage
+                           toAlbum:@"SimPhoto"
+               withCompletionBlock:^(NSError *error) {
+                   if (error)
+                   {
+                        NSLog( @"Error writing image with metadata to Photo Library: %@", error );
+                   } else
+                   {
+                        NSLog( @"Wrote image with metadata to Photo Library");
+                   }
+               }];
+    
+    // Get the assets library
+    //ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    
+    //ALAssetsLibraryWriteImageCompletionBlock imageWriteCompletionBlock =
+    //^(NSURL *newURL, NSError *error) {
+    //    if (error) {
+    //        NSLog( @"Error writing image with metadata to Photo Library: %@", error );
+    //    } else {
+    //        NSLog( @"Wrote image with metadata to Photo Library");
+    //    }
+    //};
+    
+    // Save the new image (original or edited) to the Camera Roll
+    //[library writeImageToSavedPhotosAlbum:[saveimage CGImage]
+    //                             metadata:nil
+    //                      completionBlock:imageWriteCompletionBlock];
+    self.isSaved = YES;
+    
+    
 }
 
 
@@ -67,6 +124,11 @@
     
     self.imageView.image = image;
     
+    //NSDictionary *imageMetadata = [info objectForKey:
+    //                               UIImagePickerControllerMediaMetadata];
+    
+    self.saveimage = image;
+    self.isSaved = NO;
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
@@ -75,6 +137,34 @@
 
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == [actionSheet destructiveButtonIndex])
+    {
+        //----- CLICKED Save -----
+        UIImage *saveimage = self.saveimage;//[self.appimg getImage];
+        
+        saveImageToAlbum *saveAction = [[saveImageToAlbum alloc] init];
+        [saveAction saveImageWithAlbum:saveimage
+                               toAlbum:@"SimPhoto"
+                   withCompletionBlock:^(NSError *error) {
+                       if (error)
+                       {
+                           NSLog( @"Error writing image with metadata to Photo Library: %@", error );
+                       } else
+                       {
+                           NSLog( @"Wrote image with metadata to Photo Library");
+                       }
+                   }];
+    }
+    else if (buttonIndex == [actionSheet cancelButtonIndex])
+    {
+        //----- CLICKED Ignore -----
+        
+    }
+    self.isSaved = YES;
 }
 
 

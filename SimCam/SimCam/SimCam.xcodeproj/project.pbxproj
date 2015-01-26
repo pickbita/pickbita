@@ -16,6 +16,7 @@
 		51918B781A65D64600468404 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51918B701A65D64600468404 /* Info.plist */; };
 		51918B791A65D64600468404 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51918B711A65D64600468404 /* main.m */; };
 		51918B7A1A65D64600468404 /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 51918B721A65D64600468404 /* readme */; };
+		51C3CC4E1A75AD3E00E8CF6E /* saveImageToAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C3CC4D1A75AD3E00E8CF6E /* saveImageToAlbum.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		51918B701A65D64600468404 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51918B711A65D64600468404 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		51918B721A65D64600468404 /* readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
+		51C3CC4C1A75AD3E00E8CF6E /* saveImageToAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = saveImageToAlbum.h; path = ../saveImageToAlbum.h; sourceTree = "<group>"; };
+		51C3CC4D1A75AD3E00E8CF6E /* saveImageToAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = saveImageToAlbum.m; path = ../saveImageToAlbum.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				51918B671A65D64600468404 /* APPAppDelegate.m */,
 				51918B681A65D64600468404 /* APPViewController.h */,
 				51918B691A65D64600468404 /* APPViewController.m */,
+				51C3CC4C1A75AD3E00E8CF6E /* saveImageToAlbum.h */,
+				51C3CC4D1A75AD3E00E8CF6E /* saveImageToAlbum.m */,
 				51918B6B1A65D64600468404 /* APPViewController.xib */,
 				51918B6A1A65D64600468404 /* en.lproj */,
 				51918B6F1A65D64600468404 /* Images.xcassets */,
@@ -228,6 +233,7 @@
 				51918B741A65D64600468404 /* APPViewController.m in Sources */,
 				51918B791A65D64600468404 /* main.m in Sources */,
 				51918B731A65D64600468404 /* APPAppDelegate.m in Sources */,
+				51C3CC4E1A75AD3E00E8CF6E /* saveImageToAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
