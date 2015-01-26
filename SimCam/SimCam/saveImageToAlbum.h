@@ -15,7 +15,7 @@ typedef void(^SaveImageCompletion)(NSError* error);
 @interface saveImageToAlbum : NSObject
 
 // save image to "SimPhoto"
--(void)saveImageWithAlbum:(UIImage*)image toAlbum:(NSString*)albumName withCompletionBlock:(SaveImageCompletion)completionBlock;
+-(void)saveImageWithAlbum:(UIImage*)image toAlbum:(NSString*)albumName metadata:(NSDictionary*)imagemd withCompletionBlock:(SaveImageCompletion)completionBlock;
 
 -(void)addAssetURL:(NSURL*)assetURL toAlbum:(NSString*)albumName withCompletionBlock:(SaveImageCompletion)completionBlock;
 

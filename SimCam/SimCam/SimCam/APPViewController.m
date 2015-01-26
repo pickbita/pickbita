@@ -18,7 +18,6 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     self.isSaved = YES;
 }
 
@@ -84,6 +83,7 @@
     saveImageToAlbum *saveAction = [[saveImageToAlbum alloc] init];
     [saveAction saveImageWithAlbum:saveimage
                            toAlbum:@"SimPhoto"
+                          metadata:nil
                withCompletionBlock:^(NSError *error) {
                    if (error)
                    {
@@ -93,26 +93,9 @@
                         NSLog( @"Wrote image with metadata to Photo Library");
                    }
                }];
-    
-    // Get the assets library
-    //ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-    
-    //ALAssetsLibraryWriteImageCompletionBlock imageWriteCompletionBlock =
-    //^(NSURL *newURL, NSError *error) {
-    //    if (error) {
-    //        NSLog( @"Error writing image with metadata to Photo Library: %@", error );
-    //    } else {
-    //        NSLog( @"Wrote image with metadata to Photo Library");
-    //    }
-    //};
-    
-    // Save the new image (original or edited) to the Camera Roll
-    //[library writeImageToSavedPhotosAlbum:[saveimage CGImage]
-    //                             metadata:nil
-    //                      completionBlock:imageWriteCompletionBlock];
     self.isSaved = YES;
     
-    
+    // should set UIImageView to the camera view. I don't know how to do this right now...
 }
 
 
@@ -123,9 +106,6 @@
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     self.imageView.image = image;
-    
-    //NSDictionary *imageMetadata = [info objectForKey:
-    //                               UIImagePickerControllerMediaMetadata];
     
     self.saveimage = image;
     self.isSaved = NO;
@@ -149,6 +129,7 @@
         saveImageToAlbum *saveAction = [[saveImageToAlbum alloc] init];
         [saveAction saveImageWithAlbum:saveimage
                                toAlbum:@"SimPhoto"
+                              metadata:nil
                    withCompletionBlock:^(NSError *error) {
                        if (error)
                        {
