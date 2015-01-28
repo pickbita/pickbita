@@ -14,10 +14,11 @@
 @interface API : PFObject
 
 @property (strong,nonatomic) PFUser *user;
+
 +(BOOL) isAuthorized;
 
 +(API*)sharedInstance;
 
--(void)commandWithParams:(PFQuery*)pfQuery onCompletion:(PFObjectResultBlock)completionBlock;
+//-(void)commandWithParams:(PFQuery*)pfQuery onCompletion:(PFObjectResultBlock)completionBlock;
 
 @end

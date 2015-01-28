@@ -76,7 +76,7 @@
     imagePickerController.editing = YES;
     imagePickerController.delegate = (id)self;
     
-    [self presentModalViewController:imagePickerController animated:YES];
+    [self presentViewController:imagePickerController animated:YES completion:^{}];
 }
 
 
@@ -89,11 +89,11 @@
     UIImage *croppedImage = [scaledImage croppedImage:CGRectMake((scaledImage.size.width -photo.frame.size.width)/2, (scaledImage.size.height -photo.frame.size.height)/2, photo.frame.size.width, photo.frame.size.height)];
     // Show the photo on the screen
     photo.image = croppedImage;
-    [picker dismissModalViewControllerAnimated:NO];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [picker dismissModalViewControllerAnimated:NO];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(void)effects {
