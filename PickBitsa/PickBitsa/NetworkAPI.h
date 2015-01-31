@@ -27,7 +27,8 @@
     imageTitle: (NSString*) imageTitle;
 
 -(UIImage *) download:(PFUser *) user
-          imageObject:(PFObject *) imageObject;
+            className:(NSString *) className
+             objectID:(NSString *) objectId;
 
 
 @end

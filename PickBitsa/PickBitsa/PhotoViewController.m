@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -63,17 +64,14 @@
     // upload to server
     NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
     
-    NetworkAPI *netapi = [[NetworkAPI alloc] init];
-    
-    BOOL isUploaded = [netapi upload:[PFUser currentUser] imageData:imageData imageTitle:@"123"];
-    if (!isUploaded) {
-        return;
+    if (imageData!=nil) {
+        NetworkAPI *netapi = [[NetworkAPI alloc] init];
+        
+        BOOL isUploaded = [netapi upload:[PFUser currentUser] imageData:imageData imageTitle:@"123"];
+        if (!isUploaded) {
+            return;
+        }
     }
-    // thumbnails
-    
-    
-    //
-    
 }
 
 #pragma mark - Image Picker Controller delegate methods

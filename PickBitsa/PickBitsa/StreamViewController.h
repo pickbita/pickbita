@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoView.h"
 #import "NetworkAPI.h"
 
 @interface StreamViewController : UIViewController <UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
@@ -17,6 +18,9 @@
 
 - (IBAction)Activities:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UIImageView *testDownloadImage;
+@property (strong, nonatomic) IBOutlet UIScrollView *listView;
+
+-(void)showStream:(NSArray*)stream;
+-(void)refreshStream;
 
 @end

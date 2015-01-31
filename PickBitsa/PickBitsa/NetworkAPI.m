@@ -145,15 +145,17 @@
 
 
 -(UIImage *) download:(PFUser *) user
-          imageObject:(PFObject *) imageObject;
+            className:(NSString *) className
+             objectID:(NSString *) objectId
 {
     __block UIImage *image;
-    PFFile *userImageFile = imageObject[@"imageFile"];
-    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-        if (!error) {
-            image = [UIImage imageWithData:imageData];
-        }
-    }];
+    PFQuery *query = [PFQuery queryWithClassName:className];
+    
+    PFObject *imageObject = [query getObjectWithId:objectId];
+    PFFile *imageFile = imageObject[@"imageFile"];
+    NSData *imageData = [imageFile getData];
+    image = [UIImage imageWithData:imageData];
+    
     return image;
 }
 

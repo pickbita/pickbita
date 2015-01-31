@@ -16,6 +16,7 @@
 
 @implementation PhotoView
 
+@synthesize delegate;
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -24,11 +25,15 @@
 }
 */
 
--(id)initWithIndex:(int)i andData:(NSDictionary*)data {
+-(id)initWithIndex:(int)i
+        imageIndex:(int) index
+          objectId:(NSString *) objectId
+{
     self = [super init];
     if (self !=nil) {
         //initialize
-        self.tag = [[data objectForKey:@"IdPhoto"] intValue];
+        self.objectId = objectId;
+        PFUser *user = [PFUser currentUser];
         
         int row = i/3;
         int col = i % 3;
@@ -42,34 +47,23 @@
                             ];
         caption.backgroundColor = [UIColor blackColor];
         caption.textColor = [UIColor whiteColor];
-        //caption.textAlignment = UITextAlignmentCenter;
         caption.font = [UIFont systemFontOfSize:12];
-        caption.text = [NSString stringWithFormat:@"@%@",[data objectForKey:@"username"]];
+        caption.text = [NSString stringWithFormat:@"@%@",user.username];
         [self addSubview: caption];
         
         //step 2
         //add touch event
-        [self addTarget:_delegate action:@selector(didSelectPhoto:) forControlEvents:UIControlEventTouchUpInside];
+        [self addTarget:delegate action:@selector(didSelectPhoto:) forControlEvents:UIControlEventTouchUpInside];
         
         //load the image
         NetworkAPI *netapi = [[NetworkAPI alloc] init];
-        int IdPhoto = [[data objectForKey:@"IdPhoto"] intValue];
-        //NSURL* imageURL = [netapi urlForImageWithId:[NSNumber numberWithInt: IdPhoto] isThumb:YES];
         
-        /*
-        AFImageRequestOperation* imageOperation =
-        [AFImageRequestOperation imageRequestOperationWithRequest: [NSURLRequest requestWithURL:imageURL]
-                                                          success:^(UIImage *image) {
-                                                              //create an image view, add it to the view
-                                                              UIImageView* thumbView = [[UIImageView alloc] initWithImage: image];
-                                                              thumbView.frame = CGRectMake(0,0,90,90);
-                                                              thumbView.contentMode = UIViewContentModeScaleAspectFit;
-                                                              [self insertSubview: thumbView belowSubview: caption];
-                                                          }];
-        
-        NSOperationQueue* queue = [[NSOperationQueue alloc] init];
-        [queue addOperation:imageOperation];
-         */
+        //
+        UIImage *image = [netapi download:user className:user.username objectID:objectId];
+        UIImageView* thumbView = [[UIImageView alloc] initWithImage: image];
+        thumbView.frame = CGRectMake(0,0,90,90);
+        thumbView.contentMode = UIViewContentModeScaleAspectFit;
+        [self insertSubview: thumbView belowSubview: caption];
     }
     return self;
 }

@@ -13,14 +13,17 @@
 
 //2 define the thumb delegate protocol
 @protocol PhotoViewDelegate <NSObject>
--(void)didSelectPhoto:(id)sender;
+-(void)didSelectPhoto:(NSString *)sender;
 @end
 
 //3 define the thumb view interface
 @interface PhotoView : UIButton
 
 @property (assign, nonatomic) id<PhotoViewDelegate> delegate;
+@property (strong, nonatomic) NSString *objectId;
 
--(id)initWithIndex:(int)i andData:(NSDictionary*)data;
+-(id)initWithIndex:(int)i
+        imageIndex:(int) index
+          objectId:(NSString *) objectId;
 
 @end

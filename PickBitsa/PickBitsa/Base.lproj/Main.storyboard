@@ -39,6 +39,45 @@
             </objects>
             <point key="canvasLocation" x="782.5" y="370.5"/>
         </scene>
+        <!--Full Size View Controller-->
+        <scene sceneID="bar-nV-bcY">
+            <objects>
+                <viewController id="ZX8-Li-gd4" customClass="FullSizeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uC6-ex-Oxo"/>
+                        <viewControllerLayoutGuide type="bottom" id="8dq-Nz-toF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DMQ-45-uFb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24K-Gg-xbZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Photo" id="ZfV-ZU-Ces">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="17f-w4-sNg">
+                                            <connections>
+                                                <segue destination="7aA-pg-sJq" kind="modal" id="8xs-HV-c2c"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHI-5W-VrM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="fHI-5W-VrM" id="xZ8-Qm-48r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fU-IL-8pW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782.5" y="2029.5"/>
+        </scene>
         <!--Stream View Controller-->
         <scene sceneID="mID-oL-AVi">
             <objects>
@@ -91,17 +130,16 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTv-Z8-a68">
-                                <rect key="frame" x="0.0" y="64" width="375" height="194"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="564"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPE-nn-h7m">
-                                <rect key="frame" x="45" y="367" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="testDownloadImage" destination="pPE-nn-h7m" id="kvz-UE-5l1"/>
+                        <outlet property="listView" destination="hTv-Z8-a68" id="bZz-jc-zkR"/>
+                        <segue destination="ZX8-Li-gd4" kind="modal" identifier="ShowPhoto" id="0oL-Ih-DMZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSX-9R-TaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -272,6 +310,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oUe-fs-RWS"/>
+        <segue reference="8xs-HV-c2c"/>
     </inferredMetricsTieBreakers>
 </document>
