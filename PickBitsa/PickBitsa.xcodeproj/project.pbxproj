@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		511504231A7AE53400A77378 /* StreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511504221A7AE53400A77378 /* StreamViewController.m */; };
+		511504271A7AEBB600A77378 /* saveImageToAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 511504261A7AEBB600A77378 /* saveImageToAlbum.m */; };
+		5115042A1A7B000800A77378 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511504291A7B000800A77378 /* PhotoViewController.m */; };
+		51423BF91A7D67E1008363C2 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51423BF81A7D67E1008363C2 /* PhotoView.m */; };
 		51C3CC611A79874900E8CF6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C3CC601A79874900E8CF6E /* main.m */; };
 		51C3CC641A79874900E8CF6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C3CC631A79874900E8CF6E /* AppDelegate.m */; };
 		51C3CC671A79874900E8CF6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C3CC661A79874900E8CF6E /* ViewController.m */; };
@@ -44,6 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		511504211A7AE53400A77378 /* StreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamViewController.h; sourceTree = "<group>"; };
+		511504221A7AE53400A77378 /* StreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamViewController.m; sourceTree = "<group>"; };
+		511504251A7AEBB600A77378 /* saveImageToAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = saveImageToAlbum.h; path = ../../SimCam/SimCam/saveImageToAlbum.h; sourceTree = "<group>"; };
+		511504261A7AEBB600A77378 /* saveImageToAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = saveImageToAlbum.m; path = ../../SimCam/SimCam/saveImageToAlbum.m; sourceTree = "<group>"; };
+		511504281A7B000800A77378 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		511504291A7B000800A77378 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		51423BF71A7D67E1008363C2 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
+		51423BF81A7D67E1008363C2 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
 		51C3CC5B1A79874900E8CF6E /* PickBitsa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickBitsa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C3CC5F1A79874900E8CF6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51C3CC601A79874900E8CF6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +124,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		511504241A7AEB9800A77378 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				511504251A7AEBB600A77378 /* saveImageToAlbum.h */,
+				511504261A7AEBB600A77378 /* saveImageToAlbum.m */,
+				51C3CCAA1A79A36000E8CF6E /* NetworkAPI.h */,
+				51C3CCAB1A79A36000E8CF6E /* NetworkAPI.m */,
+				51423BF71A7D67E1008363C2 /* PhotoView.h */,
+				51423BF81A7D67E1008363C2 /* PhotoView.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		51C3CC521A79874900E8CF6E = {
 			isa = PBXGroup;
 			children = (
@@ -134,14 +159,13 @@
 		51C3CC5D1A79874900E8CF6E /* PickBitsa */ = {
 			isa = PBXGroup;
 			children = (
+				511504241A7AEB9800A77378 /* Utilities */,
 				51C3CCA91A79A32C00E8CF6E /* ViewControllers */,
 				51C3CC621A79874900E8CF6E /* AppDelegate.h */,
 				51C3CC631A79874900E8CF6E /* AppDelegate.m */,
 				51C3CC681A79874900E8CF6E /* Main.storyboard */,
 				51C3CC6B1A79874900E8CF6E /* Images.xcassets */,
 				51C3CC5E1A79874900E8CF6E /* Supporting Files */,
-				51C3CCAA1A79A36000E8CF6E /* NetworkAPI.h */,
-				51C3CCAB1A79A36000E8CF6E /* NetworkAPI.m */,
 			);
 			path = PickBitsa;
 			sourceTree = "<group>";
@@ -203,6 +227,10 @@
 				51C3CC661A79874900E8CF6E /* ViewController.m */,
 				51C3CCA31A799AF500E8CF6E /* HomeViewController.h */,
 				51C3CCA41A799AF500E8CF6E /* HomeViewController.m */,
+				511504211A7AE53400A77378 /* StreamViewController.h */,
+				511504221A7AE53400A77378 /* StreamViewController.m */,
+				511504281A7B000800A77378 /* PhotoViewController.h */,
+				511504291A7B000800A77378 /* PhotoViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -307,9 +335,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				51C3CC671A79874900E8CF6E /* ViewController.m in Sources */,
+				51423BF91A7D67E1008363C2 /* PhotoView.m in Sources */,
 				51C3CC641A79874900E8CF6E /* AppDelegate.m in Sources */,
 				51C3CC611A79874900E8CF6E /* main.m in Sources */,
+				511504271A7AEBB600A77378 /* saveImageToAlbum.m in Sources */,
+				511504231A7AE53400A77378 /* StreamViewController.m in Sources */,
 				51C3CCA51A799AF500E8CF6E /* HomeViewController.m in Sources */,
+				5115042A1A7B000800A77378 /* PhotoViewController.m in Sources */,
 				51C3CCA81A799E6E00E8CF6E /* LoginViewController.m in Sources */,
 				51C3CCAC1A79A36000E8CF6E /* NetworkAPI.m in Sources */,
 			);
@@ -504,6 +536,7 @@
 				51C3CC801A79874900E8CF6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51C3CC811A79874900E8CF6E /* Build configuration list for PBXNativeTarget "PickBitsaTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +545,7 @@
 				51C3CC831A79874900E8CF6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,5 +16,8 @@
 - (IBAction)UserSignUp:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *UserName;
 @property (strong, nonatomic) IBOutlet UITextField *UserPassword;
+@property (strong, nonatomic) IBOutlet UITextField *UserEmail;
+@property (strong, nonatomic) IBOutlet UITextField *UserRepeatPassword;
+
 
 @end

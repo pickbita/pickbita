@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import "NetworkAPI.h"
+#import "StreamViewController.h"
 
 @interface HomeViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UIButton *LoginSignin;
 
 @end

@@ -18,8 +18,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+        // Do any additional setup after loading the view.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    // current user is logged in, show the album
+    NetworkAPI *netapi = [[NetworkAPI alloc] init];
+    PFUser *user;
+    if(netapi.isAuthorized)
+    {
+        user = [PFUser currentUser];
+        self.LoginSignin.hidden = YES;
+        [self performSegueWithIdentifier:@"loginsuccess" sender:self];
+    }
+    else
+    {
+        self.LoginSignin.hidden = NO;
+    }
     
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {

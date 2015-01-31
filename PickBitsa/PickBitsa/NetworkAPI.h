@@ -13,11 +13,21 @@
 
 @property (strong,atomic) PFUser *User;
 
+-(BOOL) isAuthorized;
+
 -(BOOL) UserLogin: (NSString*)UserName Password: (NSString*)UserPassword;
 
 -(BOOL) UserSignin:(NSString*)UserName
           Password: (NSString*)UserPassword
     RepeatPassword:(NSString*)RepeatPasswrod
              email:(NSString*)UserEmail;
+
+-(BOOL) upload: (PFUser *) user
+     imageData: (NSData *) imageData
+    imageTitle: (NSString*) imageTitle;
+
+-(UIImage *) download:(PFUser *) user
+          imageObject:(PFObject *) imageObject;
+
 
 @end
